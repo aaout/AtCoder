@@ -2,7 +2,8 @@
 using namespace std;
 
 //初見×
-//下手に文字列に変換しないこと
+//下手に文字列に変換しない
+//stoi, atoiなどで変換もできる
 int main()
 {
     int A, B;
