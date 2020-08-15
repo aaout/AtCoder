@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//stringは複数文字列
+//charは単体文字
 int main()
 {
     string str = "Hello";
