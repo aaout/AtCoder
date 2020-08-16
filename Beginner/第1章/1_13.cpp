@@ -37,4 +37,21 @@ int main()
         }
         cout << endl;
     }
+
+    cout << endl;
+
+    //3次元配列
+    vector<vector<vector<char>>> data3(2, vector<vector<char>>(3, vector<char>(4, '#')));
+    for (int s = 0; s < 2; s++)
+    {
+        for (int t = 0; t < 3; t++)
+        {
+            for (int u = 0; u < 4; u++)
+            {
+                cout << data3.at(s).at(t).at(u);
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 }
