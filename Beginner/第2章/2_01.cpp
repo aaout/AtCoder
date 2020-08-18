@@ -3,6 +3,7 @@ using namespace std;
 
 //for文の簡易的な書き方
 //forrangeで補完できる
+//for文の中でdata[i]と書かないように
 int main()
 {
     vector<int> data{1, 2, 3, 4, 5};
