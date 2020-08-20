@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//WA
 //大きいほうから選択するとグループの中で最大になってしまう可能性がある
 //どれほど状況をイメージ出来るか次第
 //https://img.atcoder.jp/agc012/editorial.pdf
