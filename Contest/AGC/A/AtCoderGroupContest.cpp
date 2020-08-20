@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//大きいほうから選択するとグループの中で最大になってしまう可能性がある
+//どれほど状況をイメージ出来るか次第
+//https://img.atcoder.jp/agc012/editorial.pdf
 int main()
 {
     int N;
@@ -17,8 +20,7 @@ int main()
     int sum = 0;
     for (size_t i = 1; i <= N; i++)
     {
-        cout << a[i] << endl;
-        sum += a[i];
+        sum += a[i * 2 - 1];
     }
     cout << sum << endl;
 }
