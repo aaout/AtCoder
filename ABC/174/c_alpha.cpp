@@ -21,7 +21,7 @@ int main()
             return 0;
         }
         s.insert(x);
-        x = (x * 10 + 7) % K;
+        x = (x * 10 + 7) % K; // mod の計算法則より
         ++i;
     }
     cout << -1 << endl;
