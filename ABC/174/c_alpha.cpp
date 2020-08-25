@@ -7,13 +7,14 @@ using P = pair<int, int>;
         ;
 int K;
 
+// 初見×　要復習
 int main()
 {
     cin >> K;
     int x = 7 % K;
     set<int> s;
     int i = 1;
-    while (s.count(x) == 0)
+    while (s.count(x) == 0) // s内にxがあれば1を返す
     {
         if (x == 0)
         {

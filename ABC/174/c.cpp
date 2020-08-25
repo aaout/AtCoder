@@ -6,6 +6,7 @@ using P = pair<int, int>;
     for (int i = 0; i < (n); ++i)
 int K;
 
+// 初見×　要復習
 int main()
 {
     cin >> K;
