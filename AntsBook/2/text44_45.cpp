@@ -6,16 +6,21 @@ using P = pair<int, int>;
 int N;
 char S[2020];
 
+//両端の比較のみでは不十分であることに気づけるかどうか
 int main()
 {
     cin >> N >> S;
 
     int a = 0, b = N - 1;
+    //boolで左右どちらが大きいか判断
+    //この書き方も慣れたいところ
     bool left = false;
     while (a <= b)
     {
         for (int i = 0; i <= b - a; i++)
         {
+            //S[a + i] = S[b - i] の時はスルー
+            //どちらかが大きくなるまでforが回る
             if (S[a + i] < S[b - i])
             {
                 left = true;
@@ -27,6 +32,8 @@ int main()
                 break;
             }
         }
+
+        //一字出力すると共にどちらかをインクリメント
         if (left)
             putchar(S[a++]);
         else
