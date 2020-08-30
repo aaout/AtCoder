@@ -1,26 +1,22 @@
 #include <bits/stdc++.h>
-#define rep(i, n) for (int i = 0; i < (n); ++i)
+#define rep(i, n) for (ll i = 0; i < (n); ++i)
 using namespace std;
 using ll = unsigned long long;
 using P = pair<int, int>;
-const ll MOD = 1000000007;
+const ll mod = 1'000'000'007;
+
 int main()
 {
-    int n;
+    ll n;
     cin >> n;
-    vector<int> a(n);
+    vector<ll> a(n);
     rep(i, n) cin >> a[i];
-    ll sum = 0;
-    rep(i, n - 1) for (int j = i + 1; j < n; j++)
+    ll ans = 0;
+    int w = 0; // 横方向の長さを保持する変数
+    rep(i, n)
     {
-        ll tmp = a[i] * a[j];
-        // cout << tmp << endl;
-        // cout << a[i] << ' ' << a[j] << ' ' << tmp << endl;
-        while (tmp / MOD)
-        {
-            tmp = tmp % MOD;
-        }
-        sum += tmp;
+        ans = (ans + a[i] * w) % mod;
+        w = (w + a[i]) % mod; //overflowしそうなところはmod取るようにすること
     }
-    cout << sum << endl;
+    cout << ans << endl;
 }
