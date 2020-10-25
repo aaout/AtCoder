@@ -4,7 +4,8 @@ using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
-//wa(原因不明)
+//wa(原因不明)　← 関数使用したことでoverflowしてるっぽい
+//普通のfor文で書けばよさそう
 //要求通りに出力出来てる
 int main()
 {
@@ -12,13 +13,21 @@ int main()
     cin >> n;
     vector<ll> x(n);
     rep(i, n) cin >> x[i];
-    rep(i, n) x[i] = abs(x[i]);
-    ll manhattan = accumulate(x.begin(), x.end(), 0);
-    ll cyebisyefu = *max_element(x.begin(), x.end());
-    rep(i, n) x[i] = pow(x[i], 2);
-    ll tmp = accumulate(x.begin(), x.end(), 0);
-    long double euclid = sqrt(tmp);
-    cout << manhattan << endl;
-    cout << fixed << setprecision(15) << euclid << endl;
-    cout << cyebisyefu << endl;
+
+    // {}でスコープすることで変数の管理が楽になる
+    {
+        ll ans = 0;
+        rep(i, n) ans += abs(x[i]);
+        cout << ans << endl;
+    }
+    {
+        ll ans = 0;
+        rep(i, n) ans += x[i] * x[i];
+        printf("%.10f\n", sqrt(ans)); // 小数点指定はprintfのほうが楽
+    }
+    {
+        ll ans = 0;
+        rep(i, n) ans = max(ans, abs(x[i]));
+        cout << ans << endl;
+    }
 }
