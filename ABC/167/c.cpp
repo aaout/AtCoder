@@ -20,13 +20,13 @@ int main()
         rep(j, m) cin >> a[i][j];
     }
     int ans = INF;
-    rep(s, 1 << n)
+    rep(s, 1 << n) //bit列用意
     {
         int cost = 0;
         vector<int> d(m);
-        rep(i, n)
+        rep(i, n) //bitをシフトする用のfor文
         {
-            if (s >> i & 1)
+            if (s >> i & 1) //bitが立っている要素についての処理
             {
                 cost += c[i];
                 rep(j, m) d[j] += a[i][j];

@@ -23,7 +23,7 @@ int main()
         {
             ord[v] = s.size(); // 通過観測
             s.push_back(v);    // 通過観測
-            v = a[v - 1];      // ワープ
+            v = a[v - 1];      // ワープ　indexのズレに注意
         }
         c = s.size() - ord[v]; // 周期
         l = ord[v];            // 例外長

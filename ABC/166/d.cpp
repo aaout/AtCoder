@@ -10,7 +10,7 @@ int main()
     cin >> x;
     for (int i = 1; i < 1000; i++)
     {
-        ll a5 = 1;
+        ll a5 = 1; //ansをllとすることで自動的にキャストされる
         rep(s, 5) a5 *= i;
         for (int j = -1000; j < 1000; j++)
         {
