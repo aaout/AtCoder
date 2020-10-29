@@ -29,6 +29,8 @@ void dfs(vector<int> A)
     while (A.back() <= m)
     {
         dfs(A);
+        rep(i, A.size()) cout << A[i];
+        cout << endl;
         A.back()++;
     }
 }
