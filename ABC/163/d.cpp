@@ -9,6 +9,7 @@ ll sum(ll l, ll r)
     return (l + r) * (r - l + 1) / 2;
 }
 
+// 問題の置き換えが出来ず
 int main()
 {
     int n, k;
